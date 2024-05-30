@@ -42,14 +42,14 @@
                       <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
                       <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="resultado" min="-2" pref="112" max="-2" attributes="0"/>
+                      <Component id="result" min="-2" pref="112" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
                       <Component id="jButton1" min="-2" pref="129" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <EmptySpace min="0" pref="82" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -69,7 +69,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
-                  <Component id="resultado" alignment="3" max="32767" attributes="0"/>
+                  <Component id="result" alignment="3" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="182" max="-2" attributes="0"/>
           </Group>
@@ -107,7 +107,7 @@
         <Property name="text" type="java.lang.String" value="RESULTADO:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="resultado">
+    <Component class="javax.swing.JLabel" name="result">
       <Properties>
         <Property name="text" type="java.lang.String" value="[label]"/>
       </Properties>

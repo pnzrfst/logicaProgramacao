@@ -30,7 +30,7 @@ public class Calculator extends javax.swing.JFrame {
         segundoNum = new javax.swing.JTextField();
         operacao = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
-        resultado = new javax.swing.JLabel();
+        result = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
@@ -47,7 +47,7 @@ public class Calculator extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel1.setText("RESULTADO:");
 
-        resultado.setText("[label]");
+        result.setText("[label]");
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -81,11 +81,11 @@ public class Calculator extends javax.swing.JFrame {
                         .addGap(115, 115, 115)
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(result, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(138, 138, 138)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 82, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,7 +102,7 @@ public class Calculator extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(resultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(result, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(182, 182, 182))
         );
 
@@ -116,10 +116,22 @@ public class Calculator extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         double primeiroNumero = Double.parseDouble(this.primeiroNum.getText());
         double segundoNumero = Double.parseDouble(this.segundoNum.getText());
-        
         String operacoes = this.operacao.getSelectedItem().toString();
         
-        this.resultado.setText("O resultado é: ");
+        double result = 0.0;
+        
+        
+        if(operacoes == "+") {
+            result = primeiroNumero + segundoNumero;
+        } else if (operacoes == "-") {
+            result = primeiroNumero - segundoNumero;
+        } else if (operacoes == "*") {
+            result = primeiroNumero * segundoNumero;
+        } else {
+            result = primeiroNumero / segundoNumero;
+        }
+        
+        this.result.setText(result + "");
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -164,7 +176,7 @@ public class Calculator extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JComboBox<String> operacao;
     private javax.swing.JTextField primeiroNum;
-    private javax.swing.JLabel resultado;
+    private javax.swing.JLabel result;
     private javax.swing.JTextField segundoNum;
     // End of variables declaration//GEN-END:variables
 }
