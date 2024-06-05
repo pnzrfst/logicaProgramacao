@@ -82,7 +82,10 @@ public class AlgoritmosJava {
         
         System.out.println("O total de eleitores foi" + totalEleitores + " sendo: " + percentualBrancos + " brancos" + percentualNulos + " nulos e" + percentualValidos + " validos");*/
         
-        Scanner leia = new Scanner(System.in);
+        
+        // conversor de temperatura
+        
+        /*Scanner leia = new Scanner(System.in);
         
         System.out.println("Qual a temperatura? (em C): ");
         double tempCelsius = leia.nextDouble();
@@ -90,12 +93,11 @@ public class AlgoritmosJava {
         double tempFahrenheit = (tempCelsius * 1.8) + 32;
         double tempKelvin = tempCelsius + 273.15;
         
-        System.out.println("A sua temperatura em celsius é de: " + tempCelsius +"C" + ", em Fahrenheit é de: " + tempFahrenheit + "F" + " e em Kelvin é de: " + tempKelvin + "K");
-        
-        
-        
-        
+        System.out.println("A sua temperatura em celsius é de: " + tempCelsius +"C" + ", em Fahrenheit é de: " + tempFahrenheit + "F" + " e em Kelvin é de: " + tempKelvin + "K");*/
+      
     }
+    
+   
     
     
     
