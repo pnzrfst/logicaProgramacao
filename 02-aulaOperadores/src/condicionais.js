@@ -98,13 +98,13 @@ let mediaTotal = valorTotal / 2;
 console.log("a média de gasto: R$" + mediaTotal);
 
 if(totalCompra1 > 20){
-    console.log(nomeUser1 + " gastou mais de 20 reais em mercadorias.")
+    console.log(nomeUser1 + " gastou mais de R$20 em mercadorias.")
 }else{
-    console.log(nomeUser1 + " nao gastou mais de 20.")
+    console.log(nomeUser1 + " nao gastou mais de R$20 em mercadorias.")
 }
 
 if(totalCompra2 > 20){
-     console.log(nomeUser2 + " gastou mais de 20 reais em mercadorias.")
+     console.log(nomeUser2 + " gastou mais de R$20 em mercadorias.")
 } else{
-    console.log(nomeUser2 + " nao gastou mais de 20.")
+    console.log(nomeUser2 + " nao gastou mais de R$20 em mercadorias.")
 }*/
