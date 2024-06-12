@@ -9,7 +9,7 @@ outra senha digitada, informar “acesso negado”.
 console.log("Escreva sua senha: ");
 var senha = leia.prompt();
 
-if(senha = 1234){
+if(senha ===1234){
     console.log("Acesso permitido.");
 } else{
     console.log("Acesso negado.");
@@ -17,7 +17,7 @@ if(senha = 1234){
 
 /*Desenvolva um programa para descobrir se o número lido no teclado é par ou ímpar.
 
-var numero = leia.questionFloat("Escreva um numero: ");
+var numero = leia.questionInt("Escreva um numero: ");
 
 var paridade = numero %= 2
 
@@ -86,25 +86,70 @@ que cada um desses clientes pagou por sua compra. O algoritmo deverá escrever:
 (b) o valor médio das compras efetuadas; 
 (c) os nomes dos clientes que efetuaram compras superiores a 20 reais.
 
-
 let nomeUser1 = leia.question("Escreva seu nome: ");
 let nomeUser2 = leia.question("Escreva seu nome: ");
 let totalCompra1 = leia.questionFloat("Informe o total da sua compra: ");
 let totalCompra2 = leia.questionFloat("Informe o total da sua compra: ");
 
 let valorTotal = totalCompra1 + totalCompra2;
-console.log("o total das compras: R$" + valorTotal)
+console.log("o total das compras: R$" + valorTotal);
 let mediaTotal = valorTotal / 2;
 console.log("a média de gasto: R$" + mediaTotal);
 
 if(totalCompra1 > 20){
-    console.log(nomeUser1 + " gastou mais de R$20 em mercadorias.")
-}else{
-    console.log(nomeUser1 + " nao gastou mais de R$20 em mercadorias.")
+    console.log(nomeUser1 + " gastou mais de R$20 em mercadorias.");
 }
 
 if(totalCompra2 > 20){
-     console.log(nomeUser2 + " gastou mais de R$20 em mercadorias.")
-} else{
-    console.log(nomeUser2 + " nao gastou mais de R$20 em mercadorias.")
+     console.log(nomeUser2 + " gastou mais de R$20 em mercadorias.");
 }*/
+
+/*Uma empresa abriu uma linha de crédito para os funcionários. O valor da prestação não
+pode ultrapassar 30% do salário. Faça um programa que receba o salário, o valor do
+empréstimo e o número de prestações e informe se o empréstimo pode ser concedido.
+
+var salario = leia.questionFloat("informe seu salario: R$");
+
+var emprestimo = leia.questionFloat("quanto deseja pegar emprestado: R$");
+
+var prestaçoes = leia.questionInt("quantas vezes deseja pagar o dinheiro: ");
+
+let valorPrestacao = emprestimo / prestaçoes;
+
+if(valorPrestacao >= (salario * 0.30)){
+    console.log("o empréstimo não sera concebido.")
+}else{
+    console.log("o empréstimo será concebido.")
+}*/
+
+/*No nosso ano, temos meses que tem 31, 30 e 29/28 dias. Crie um programa que ao receber um
+número inteiro representando o mês ele informe quantos dias tem esse mês.
+
+let mes = leia.questionInt("escreva o mes: ");
+
+switch(mes){
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        console.log("o mes tem 31 dias.");
+    break    
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+        console.log("o mes tem 30 dias.");
+    break   
+    case 2:
+        console.log("o mes tem 28/29 dias, de acordo com o ano.");
+    break    
+    default:
+        console.log("mes invalido, informe um mes válido.");
+}*/
+
+
+
+
