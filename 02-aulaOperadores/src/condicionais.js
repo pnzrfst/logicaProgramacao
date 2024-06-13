@@ -115,11 +115,12 @@ var emprestimo = leia.questionFloat("quanto deseja pegar emprestado: R$");
 var prestaçoes = leia.questionInt("quantas vezes deseja pagar o dinheiro: ");
 
 let valorPrestacao = emprestimo / prestaçoes;
+let limiteParcela = salario * 0.30;
 
-if(valorPrestacao >= (salario * 0.30)){
-    console.log("o empréstimo não sera concebido.")
-}else{
-    console.log("o empréstimo será concebido.")
+if(valorPrestacao >= limiteParcela ){
+    console.log("o empréstimo não sera concedido.")
+}else{ 
+    console.log("o empréstimo será concedido.")
 }*/
 
 /*No nosso ano, temos meses que tem 31, 30 e 29/28 dias. Crie um programa que ao receber um
@@ -150,6 +151,116 @@ switch(mes){
         console.log("mes invalido, informe um mes válido.");
 }*/
 
+/*Faça um programa de computador que realiza o cálculo do salário dos funcionários que é
+composto por um salário fixo mais uma certa porcentagem pela qtd de dependentes do
+funcionário. Solicite o nome do funcionário, salário fixo e também a quantidade de
+dependentes e por fim exiba o seu salário final.
+0 Dependente 2%
+1 Dependente 5%
+2 Dependentes 7%
+3 Dependentes 10%
+4 ou mais dependentes 15%
 
+var funcionario = leia.question("informe seu nome: ");
+var salarioFixo = leia.questionFloat("informe seu salario: R$");
+var dependentes = leia.questionInt("informe quantos dependentes voce possui: ");
+let percentualDependente;
 
+switch(dependentes){
+    case 0:
+        percentualDependente = 0.2;
+    break 
+    case 1:
+        percentualDependente =  0.5;
+    break     
+    case 2: 
+        percentualDependente = 0.7;
+    break
+    case 3:
+        percentualDependente = 0.10;
+    break
+    default:
+        percentualDependente = 0.15;
+}
 
+let acrescimoSalario = salarioFixo * percentualDependente;
+let salarioFinal = salarioFixo + acrescimoSalario;
+
+console.log(`olá, ${funcionario}, seu salário é de  ${salarioFinal.toFixed(2)} reais. `)*/
+
+/*Estamos desenvolvendo o sistema de doações do Criança Esperança. O sistema deve
+solicitar para o doador o quanto ele pretende doar. Atualmente existem 3 valores padrões,
+são eles: R$10, R$25 e R$50. Caso o doador queira doar um valor diferente, também é
+possível através de uma opção que vai solicitar ao usuário um valor. Ao final o sistema deve
+mostrar qual o valor doado e também agradecer o doador.
+
+var valorDoacao = leia.question("informe se deseja doar (R$ 10) -- 1, (R$25) --2, (R$50) --3, ou outro valor -- 4  ")
+let valorDoado
+switch(valorDoacao){
+    case "1":
+        valorDoado = 10;
+    break;
+    case "2":
+        valorDoado = 25;
+    break;
+    case "3":
+        valorDoado = 50;
+    break;
+    case "4":
+        valorDoado = leia.questionInt("quanto voce deseja doar? : ");
+    break;
+    default:
+         console.log("informe um valor valido.");
+}
+
+if (valorDoado !== undefined){
+console.log(`Obrigado, voce doou R$${valorDoado.toFixed(2)}`);
+}*/
+
+/*Desenvolva um algoritmo, que com base na quantidade de gols feitos por dois times em uma
+partida, deve informar se houve EMPATE, ou se foi uma PARTIDA NORMAL ou se houve uma
+GOLEADA.
+Diferença de gols for 0 – EMPATE
+Diferença de gols 1, 2 ou 3 – PARTIDA NORMAL
+Diferença de gols > 4 – GOLEADA
+
+var quantGolsA = leia.questionInt("quantos gols o time A fez? ");
+var quantGolsB = leia.questionInt("quantos gols o time B fez? ");
+
+let diferencaGols = quantGolsA - quantGolsB;
+if(quantGolsA < quantGolsB){
+    diferencaGols = quantGolsB - quantGolsA;
+}
+
+if(diferencaGols === 0){
+    console.log("A partida terminou empatada.");
+}else if(diferencaGols >= 1 && diferencaGols < 3){
+    console.log("Foi uma partida normal.")
+}else{
+    console.log("A partida foi uma goleada.")
+}*/
+
+/*Você está fazendo um software para o cadastro da viagem da turma. Escreva um programa
+que solicite ao usuário sua idade e verifique se ele é maior de idade. Se for maior de idade,
+peça o nome completo. Caso contrário, peça a permissão dos pais e depois o nome completo
+do usuário
+
+var idadeUser = leia.questionInt("informe sua idade: ");
+
+if(idadeUser >= 18){
+    var nome = leia.question("qual o seu nome completo: ");
+    console.log(`Olá, ${nome}`)
+}else{
+    var autorizacao = leia.question("O responsavel permite seu cadastro? pressione [1] para sim e [2] para nao: ");
+    switch(autorizacao){
+        case "1":
+            var nome = leia.question("informe seu nome completo: ");
+            console.log(`Olá, ${nome}`)
+        break;
+        case "2":
+            console.log("Permissao negada.");
+        break;
+        default:
+            console.log("Opçao invalida.")
+    }
+}*/
