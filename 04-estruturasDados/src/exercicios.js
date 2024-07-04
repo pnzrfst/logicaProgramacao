@@ -18,6 +18,7 @@ for(var i = 0; i <= 5; i++){
     }
 }
 }while(contador <= 5);*/
+
 /*Crie um algoritmo que solicite a entrada de 10 números pelo usuário, armazene-os em
 um vetor e então crie outro vetor com os valores do primeiro vetor multiplicados por 5.
 Por fim exiba os dois vetores.
@@ -36,6 +37,7 @@ for(var i = 0; i < listaNum.length; i++){
 
 console.log(listaNum);
 console.log(totalMult);*/
+
 /*Escreva um algoritmo que solicite ao usuário a entrada de 5 números, e que exiba o
 somatório desses números na tela. Após exibir a soma, o programa deve mostrar
 também os números que o usuário digitou, um por linha.
@@ -51,6 +53,7 @@ for (var i = 0; i < 5; i++){
         console.log(digito)
     }
 }*/
+
 /*Crie um algoritmo para ler 10 números inteiros e mostrar os números pares deste vetor;
 
 var numerosUsuario = [];
@@ -62,7 +65,9 @@ for(var i = 0; i < 4; i++){
     }else{
         console.log("numero impar")
     }
-}*/
+}
+*/
+
 /*Crie um algoritmo para ler 15 números inteiros e mostrar no final, os que forem maiores
 ou igual a 10;
 
@@ -85,7 +90,8 @@ if(maioresQue.length > 0){
 }else{
     console.log(`nenhum numero é maior que 10.`)
 }
-console.log(maioresQue)*/
+console.log(maioresQue)
+
 /*Faça um algoritmo para ler um vetor com 10 elementos e inverter a posição destes
 elementos, de tal modo que o primeiro elemento venha a ser o último depois da
 inversão;
@@ -101,6 +107,7 @@ for(var i = 0; i < 5; i++){
 lista.reverse();
 
 console.log(lista);*/
+
 /*Criem um algoritmo que tenha dois vetores de 30 posições,
 um para armazenar a mínima de cada dia e outro para a
 máxima;
@@ -108,7 +115,7 @@ máxima;
 temperatura para o dia. Estes valores devem estar entre 12 e
 35 graus.
 - De posse destes dois valores gerados, coloquem o menor no
-vetor de mínimas e o maior no vetor de máximas.
+vetor de mínimas e o maior no vetor de máximas
 
 var valoresUsuarios = [];
 
@@ -146,6 +153,29 @@ do pai e com as características genéticas ímpares da mãe*/
 
 var vetorPai = [];
 
-for(i = 0; i < 4; i++){
-
+for(var P = 0; P < 6; P++){
+    var  numeroAleatorioPai = parseInt((Math.random() * 10));
+    vetorPai.push(numeroAleatorioPai);
 }
+
+var vetorMae = [];
+
+for(var M = 0; M < 6; M++){
+    var numeroAleatorioMae = parseInt((Math.random() * 10));
+    vetorMae.push(numeroAleatorioMae);
+}
+
+
+var vetorFilho = [];
+
+for(var F = 0; F < 6; F++){
+    if(F % 2 === 0){
+        vetorFilho.push(vetorPai[F]);
+    }else{
+        vetorFilho.push(vetorMae[F]);
+    }
+}
+
+console.log(vetorMae);
+console.log(vetorPai);  
+console.log(vetorFilho);
